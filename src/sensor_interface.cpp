@@ -23,8 +23,8 @@ void updateIMUReadings(float& ax, float& ay, float& az, float& gx, float& gy,
   mag.getEvent( &mag_event);
   float Ax, Ay, Gx, Gy;
   gyro.getSensorsReadings(Ax, Ay, az, Gx, Gy, gz);
-  ax = -Ay / G;
-  ay = Ax / G;
+  ax = Ay / G;
+  ay = -Ax / G;
   az = az / G;
   gx = Gy;
   gy = -Gx;

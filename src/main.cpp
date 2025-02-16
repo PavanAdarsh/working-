@@ -20,7 +20,7 @@ void setup() {
     delay(1);
   }
   Wire.setSDA(PB7);
-  Wire.setSCL(PB8);
+  Wire.setSCL(PB6);
   Wire.begin();
   
   initializeCommunication();
@@ -51,10 +51,10 @@ void loop() {
     sendOrientation(roll, pitch, yaw);
     sendDepth(depth);
     // Serial.print("mx : ");Serial.println(mx);
-    Serial.print("roll: "); Serial.println(roll);
-    Serial.print("pitch: "); Serial.println(pitch);
-    Serial.print("yaw: "); Serial.println(yaw);
-    delay(100);
+    // Serial.print("roll: "); Serial.println(roll);
+    // Serial.print("pitch: "); Serial.println(pitch);
+    // Serial.print("yaw: "); Serial.println(yaw);
+    // delay(100);
   }
   checkForCommands();
 }
